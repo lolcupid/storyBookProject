@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">StoryBook</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Welcome {{user.firstName}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/story">{{user.firstName}}Public Stories</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

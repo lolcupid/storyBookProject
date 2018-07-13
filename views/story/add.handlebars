@@ -1,0 +1,29 @@
+<h1>Add Story</h1>
+<div class="col-sm-12">
+  <form action="/stories" method="post">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" class="form-control">
+    </div>
+
+    <select name="status" class='custom-select custom-select-lg'>
+      <option value="public" selected>Public</option>
+      <option value="private">Private</option>
+      <option value="unpublished">Unpublished</option>
+    </select>
+
+    <div class="form-check mt-3">
+      <input class="form-check-input" name="allowComments" type="checkbox" checked="checked" id="filled-in-box">
+      <label class="form-check-label" for="filled-in-box">
+        Allow Comments
+      </label>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="textarea">Tell Us Your Story:</label>
+      <textarea name="textBody" class="form-control" id="textarea" rows="3"></textarea>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-success">
+  </form>
+</div>
